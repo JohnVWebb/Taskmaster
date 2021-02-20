@@ -1,4 +1,4 @@
-//Holds all data for entire application
+//Holds all data for entire application and holds all of the models based on data provided
 import Value from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"

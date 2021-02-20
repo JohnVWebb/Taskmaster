@@ -8,8 +8,8 @@ function _draw() {
   let template = ''
   values.forEach(v => template += v.Template)
   document.getElementById("app").innerHTML = /*html*/`
-  <button className="btn btn-info" onclick="app.valuesController.addValue()">Add Value</button>  
-  <div className="card-columns values">
+  <button class="btn btn-info" onclick="app.valuesController.addValue()">Create List</button>  
+  <div class="card-columns values">
       ${template}
   </div>
   `
