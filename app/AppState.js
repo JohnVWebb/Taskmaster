@@ -1,11 +1,14 @@
 //Holds all data for entire application and holds all of the models based on data provided
-import Value from "./Models/Value.js"
+import List from "./Models/List.js"
+import Sublist from "./Models/Sublist.js";
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-  /** @type {Value[]} */
-  values = []
+  /** @type {List[]} */
+  lists = []
+  /** @type {Sublist[]} */
+  sublists = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
@@ -19,4 +22,5 @@ export const ProxyState = new Proxy(new AppState(), {
     target.emit(prop, value)
     return true
   }
+  
 })

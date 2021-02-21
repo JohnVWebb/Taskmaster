@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
-    <title>taskmaster</title>
+    <title>Taskmaster</title>
 </head>
 
 <body>
@@ -21,13 +21,23 @@
         </nav>
     </header>
     <main>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col text-center" id='app'>
-
+        <div id="app" class="container-fluid">
+            <div class="row text-center bg-info">
+                <div class="col-12 pt-3">
+                    <form onsubmit="app.listController.create(event)">
+                        <div class="form-group">
+                            <input type="text" name="title" placeholder="Enter list title...">
+                            <button class="btn btn-primary" type="submit">Create List</button>
+                            
+                        </div>
+                    </form>
                 </div>
             </div>
+            <div class="row" id="lists">
+
+            </div>
         </div>
+
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
