@@ -2,9 +2,6 @@ import  sublistService  from "../Services/SublistService.js";
 
 export default class SublistController{
 
-    constructor() {
-    }
-
     create(event, listId) {
     event.preventDefault()        
         let form = event.target

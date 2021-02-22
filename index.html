@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <title>Taskmaster</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">taskmaster</span>
+            <a class="navbar-brand">
+                <img src="assets/img/logo2.png" width="45" height="45">
+                <span class="ml-2">Taskmaster</span>
             </a>
         </nav>
     </header>
@@ -26,18 +28,14 @@
                 <div class="col-12 pt-3">
                     <form onsubmit="app.listController.create(event)">
                         <div class="form-group">
-                            <input type="text" name="title" placeholder="Enter list title...">
+                            <input type="text" autocomplete="off" name="title" placeholder="Enter list title">
                             <button class="btn btn-primary" type="submit">Create List</button>
-                            
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="row" id="lists">
-
-            </div>
+            <div class="row" id="lists"></div>
         </div>
-
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">

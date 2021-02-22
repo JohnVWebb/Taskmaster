@@ -9,13 +9,12 @@ export default class List {
 
     get Template() {
         return /*html*/`
-        <div class="col-4 border rounded shadow-lg">
+        <div class="col-12 border border-info rounded outline- text-center">
             <h1>${this.title}<button class="text-danger close mt-3"
             onclick="app.listController.delete('${this.id}')"><span>&times;</span></button> </h1>
-            <h5>Task</h5>
             <form onsubmit="app.sublistController.create(event, '${this.id}')">
-                <div class="form-group">
-                    <input type="text" name="title" placeholder="Enter task title...">
+                <div class="form-group form-check">
+                    <input type="text" autocomplete="off" name="title" placeholder="Enter task title...">
                     <button class="btn btn-primary" type="submit">Add Task</button>
                     <div class="row">
                     ${this.Sublists}

@@ -1,4 +1,3 @@
-//Holds all data for entire application and holds all of the models based on data provided
 import List from "./Models/List.js"
 import Sublist from "./Models/Sublist.js";
 import { EventEmitter } from "./Utils/EventEmitter.js"
@@ -21,6 +20,5 @@ export const ProxyState = new Proxy(new AppState(), {
     target[prop] = value
     target.emit(prop, value)
     return true
-  }
-  
+  } 
 })
