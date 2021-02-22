@@ -1,8 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { listService }  from "../Services/ListService.js";
 
-
-//Private
 function _draw() {
   let listsElem = document.getElementById("lists")
   let template = ""
@@ -10,7 +8,6 @@ function _draw() {
   listsElem.innerHTML = template
 }
 
-//Public
 export default class ListController {
   constructor() {
     ProxyState.on("lists", _draw)
