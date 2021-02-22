@@ -14,9 +14,7 @@ export default class SublistService{
     
     delete(sublistId) {
         ProxyState.sublists = ProxyState.sublists.filter(s => s.id != sublistId)
-
     }
-
 }
 
 //export const sublistService = new SublistService()
