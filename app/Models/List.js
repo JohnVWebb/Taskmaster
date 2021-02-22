@@ -2,14 +2,15 @@ import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/GenerateId.js"
 
 export default class List {
-    constructor({title, id = generateId()}) {
+    constructor({title, color, id = generateId()}) {
         this.title = title
         this.id = id
+        this.color = color
     }
 
     get Template() {
         return /*html*/`
-        <div class="col-12 border border-info rounded outline- text-center">
+        <div style="background-color:${this.color}" class="col-12 border border-info rounded outline- text-center">
             <h1>${this.title}<button class="text-danger close mt-3"
             onclick="app.listController.delete('${this.id}')"><span>&times;</span></button> </h1>
             <form onsubmit="app.sublistController.create(event, '${this.id}')">
