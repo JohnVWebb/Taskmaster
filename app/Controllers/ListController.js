@@ -24,6 +24,7 @@ export default class ListController {
   }
 
   delete(listId) {
+    confirm('Are you sure?')
     listService.delete(listId)
   }
 }

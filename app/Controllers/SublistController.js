@@ -1,4 +1,4 @@
-import  sublistService  from "../Services/SublistService.js";
+import { sublistService } from "../Services/SublistService.js";
 
 export default class SublistController{
 
@@ -9,10 +9,12 @@ export default class SublistController{
             title: form.title.value,
             listId: listId
         }
+        //NOTE
     sublistService.create(rawSublist)       
     }
 
     delete(sublistId) {
+        confirm("Are you sure?")
         sublistService.delete(sublistId)
     }
 }

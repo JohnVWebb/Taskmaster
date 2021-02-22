@@ -2,8 +2,7 @@ import { ProxyState } from "../AppState.js";
 import Sublist from "../Models/Sublist.js";
 import { saveState } from "../Utils/LocalStorage.js";
 
-
-export default class SublistService{
+class SublistService{
     constructor() {
      ProxyState.on('sublists', saveState)
     }
@@ -17,4 +16,4 @@ export default class SublistService{
     }
 }
 
-//export const sublistService = new SublistService()
+export const sublistService = new SublistService()
