@@ -15,7 +15,7 @@ export default class List {
             onclick="app.listController.delete('${this.id}')"><span>&times;</span></button> </h1>
             <form onsubmit="app.sublistController.create(event, '${this.id}')">
                 <div class="form-group form-check">
-                    <input type="text" autocomplete="off" name="title" placeholder="Enter task title...">
+                    <input type="text" maxlength="50" minlength="3" autocomplete="off" name="title" placeholder="Enter task title...">
                     <button class="btn btn-primary" type="submit">Add Task</button>
                     <div class="row">
                     ${this.Sublists}
